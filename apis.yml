@@ -1,28 +1,146 @@
 aid: bullion-api
+
 name: Bullion API
-description: 'Bullion API is a company surfaced via the API Evangelist harvest backlog (source: new-submission)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://bullionapi.dev/opengraph-image
+
+description: Bullion API provides real-time gold spot prices and historical data for developers. It offers cached price observations in over 150
+  currencies, a simple REST endpoint, and a free tier with 30 monthly requests. The service targets apps needing indicative valuations, charts,
+  and market data without requiring credit cards.
+
 url: https://raw.githubusercontent.com/api-evangelist/bullion-api/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:new-submission
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-14 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-14'
+
 modified: '2026-10-14'
+
 tags:
 - Company
-apis: []
+- Gold
+- Prices
+- API
+- Finance
+- Data
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Plans
+  url: plans/bullion-api-plans-pricing.yml
+- type: Spectral
+  url: rules/bullion-api-rules.yml
+- type: JSONLD
+  url: json-ld/bullion-api-context.jsonld
+- type: Vocabulary
+  url: vocabulary/bullion-api-vocabulary.yml
+- type: DataModel
+  url: data-model/bullion-api-data-model.yml
+- type: Security
+  url: security/bullion-api-vulnerability-disclosure.yml
+- type: Conformance
+  url: conformance/bullion-api-conformance.yml
+- type: LLMsTxt
+  url: llms/bullion-api-llms.txt
+- type: SecurityTxt
+  url: well-known/bullion-api-status-security.txt
+- type: SecurityTxt
+  url: well-known/bullion-api-security.txt
+- type: SecurityTxt
+  url: well-known/bullion-api-api-security.txt
+- type: WellKnown
+  url: well-known/bullion-api-well-known.yml
+- type: Hosts
+  url: hosts/bullion-api-hosts.yml
+- type: Vendors
+  url: vendors/bullion-api-vendors.yml
+- type: TermsOfService
+  url: https://bullionapi.dev/terms
+- type: StatusPage
+  url: https://status.bullionapi.dev/
+- type: PrivacyPolicy
+  url: https://bullionapi.dev/privacy
+- type: Pricing
+  url: https://bullionapi.dev/pricing
+- type: Postman
+  url: https://god.gw.postman.com/run-collection/678099-be195d32-b9c5-469d-9d24-38af8bc946d6
+- type: Login
+  url: https://bullionapi.dev/login
+- type: DeveloperPortal
+  url: https://api.bullionapi.dev`
+- type: VulnerabilityDisclosure
+  url: security/bullion-api-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/bullion-api-domain-security.yml
 - type: Website
   url: https://bullionapi.dev
 - type: Documentation
   url: https://bullionapi.dev/docs
+
+apis:
+- aid: bullion-api:bullion-api-api
+  name: Bullion API API
+  description: 'Bullion API API as documented publicly: 10 operations. Contract generated from the documentation by API Evangelist (2026-10-14);
+    not the provider''s own document.'
+  humanURL: https://bullionapi.dev/docs.md
+  baseURL: https://api.bullionapi.dev
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/bullion-api-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/bullion-api-get-v1-silver-consumption-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bullion-api-get-v1-central-bank-gold-de-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bullion-api-get-v1-v1-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bullion-api-get-v1-central-bank-reserves-gb-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bullion-api-get-v1-gold-goldid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bullion-api-get-v1-countries-uk-response-schema.json
+
 x-submission-notes: Gold spot-price API with docs and first-party contact
+
 x-submission-probe: root 200, docs 200; soft-404 ok
+
 x-submitted-by: hello@bullionapi.dev (apis.io/add, 2026-10-13)
+
+x-coverage:
+  state: gated
+  reason: partner-login
+  method: derived
+  generated: '2026-10-14'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company serves an API surface but requires credentials before any description of it can be read
+  evidence:
+  - url: https://bullionapi.dev/openapi.json
+    status: null
+  - url: https://api.bullionapi.dev/openapi.json
+    status: null
+  - url: https://status.bullionapi.dev/openapi.json
+    status: null
+  - url: https://api.bullionapi.dev/mcp
+    status: 401
+  - url: https://bullionapi.dev
+    status: 200
+x-enrichment:
+  date: '2026-10-14'
+  status: enriched
+  artifacts_added: 31
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

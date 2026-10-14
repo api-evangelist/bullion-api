@@ -1,0 +1,27 @@
+generated: '2026-10-14'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://bullionapi.dev/privacy.md
+sources:
+- https://bullionapi.dev/privacy.md
+standards:
+- id: gdpr
+  conforms: true
+  evidence: 'Under the EU GDPR and UK GDPR we rely on the following bases:'
+- id: ccpa
+  conforms: true
+  evidence: Under the California Consumer Privacy Act (CCPA/CPRA), we do not sell or share personal information for cross-context behavioural
+    advertising.
+- id: openapi-3.1
+  conforms: true
+  evidence: the document declares 3.1.0
+- id: oauth2
+  conforms: false
+  evidence: 'securitySchemes: apiKey (apiKey)'
+- id: rfc9457
+  conforms: false
+  evidence: no response declares application/problem+json
+- id: idempotency
+  conforms: false
+  evidence: no idempotency key parameter on mutating operations
+docs: https://bullionapi.dev/privacy.md

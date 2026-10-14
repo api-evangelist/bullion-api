@@ -1,0 +1,65 @@
+generated: '2026-10-14'
+method: derived
+generator: derive-mcp-candidate.py
+source:
+- openapi/_ae-authored/bullion-api-openapi-generated.yml
+status: candidate
+deployment:
+  mode: none
+  auth: unknown
+  verified: probed
+note: 'No MCP server was found. The pre-flight posted tools/list to /mcp on bullionapi.dev, api.bullionapi.dev, status.bullionapi.dev; verdict
+  gated (https://api.bullionapi.dev/mcp answered 401: the edge authenticates before it routes, which proves nothing either way). Candidate tools
+  below are derived from the 10 operation(s) in the provider''s own OpenAPI (10 listed); they describe what a server WOULD expose, not one that
+  exists.'
+tools:
+- name: get_v1_central_bank_gold_de
+  operationId: get_v1_central_bank_gold_de
+  method: GET
+  path: /v1/central-bank-gold/de
+  description: GET /v1/central-bank-gold/de
+- name: get_v1_central_bank_reserves_gb
+  operationId: get_v1_central_bank_reserves_gb
+  method: GET
+  path: /v1/central-bank-reserves/gb
+  description: GET /v1/central-bank-reserves/gb
+- name: get_v1_countries_uk
+  operationId: get_v1_countries_uk
+  method: GET
+  path: /v1/countries/uk
+  description: GET /v1/countries/uk
+- name: get_v1_gold_goldid
+  operationId: get_v1_gold_goldid
+  method: GET
+  path: /v1/gold/{goldid}
+  description: GET /v1/gold/carat
+- name: delete_v1_portfolio_transactions_11111111_1111_4111_8111_111
+  operationId: delete_v1_portfolio_transactions_11111111_1111_4111_8111_111111111111
+  method: DELETE
+  path: /v1/portfolio/transactions/11111111-1111-4111-8111-111111111111
+  description: DELETE /v1/portfolio/transactions/11111111-1111-4111-8111-111111111111
+- name: get_v1_portfolio_portfolioid
+  operationId: get_v1_portfolio_portfolioid
+  method: GET
+  path: /v1/portfolio/{portfolioid}
+  description: GET /v1/portfolio/gains
+- name: get_v1_silver_consumption
+  operationId: get_v1_silver_consumption
+  method: GET
+  path: /v1/silver/consumption
+  description: GET /v1/silver/consumption
+- name: get_v1_metal_id
+  operationId: get_v1_metal_id
+  method: GET
+  path: /v1/{metal}/{id}
+  description: Returns one metal's absolute and percentage change between the final cached observation of two UTC days
+- name: get_v1_v1id
+  operationId: get_v1_v1id
+  method: GET
+  path: /v1/{v1id}
+  description: GET /v1/bond-yields returns the latest government bond yields for every covered country.
+- name: get_v1_v1id_country
+  operationId: get_v1_v1id_country
+  method: GET
+  path: /v1/{v1id}/{country}
+  description: GET /v1/bond-yields/{country} returns government bond yields for one country.

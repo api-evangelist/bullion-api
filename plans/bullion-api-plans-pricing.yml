@@ -1,0 +1,34 @@
+generated: '2026-10-14'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://bullionapi.dev/pricing
+sources:
+- https://bullionapi.dev/pricing
+- https://bullionapi.dev/pricing.md
+name: Bullion API pricing
+audience: developer-api
+pricing_basis: flat-platform
+plans:
+- name: Free
+  price_text: $0
+  price: 0
+  description: Evaluate the API. No credit card. Non-commercial use of the Bullion API Service only.
+  limits:
+  - name: monthly_requests
+    limit_text: 30 requests / month
+- name: Pro
+  price_text: $9 / mo
+  price: 9
+  description: Higher-volume evaluation and internal use. Non-commercial use of the Bullion API Service only.
+  limits:
+  - name: monthly_requests
+    limit_text: 50,000 requests / month
+- name: Business
+  price_text: $29 / mo
+  price: 29
+  description: Commercial use of the Service in your own product or service. Commercial use included; raw or substantially equivalent market-price
+    data and API access cannot be redistributed or resold.
+  limits:
+  - name: monthly_requests
+    limit_text: 100,000 requests / month
+docs: https://bullionapi.dev/pricing

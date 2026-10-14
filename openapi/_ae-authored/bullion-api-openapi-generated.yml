@@ -1,0 +1,682 @@
+openapi: 3.1.0
+info:
+  title: Bullion API API
+  version: '2026-10-14'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-14: 10 operation(s) read from 1 public documentation page(s) (each operation
+    names its page in x-source). This is not the provider''s published contract; Bullion API has published no machine-readable contract that the
+    pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 22
+    documentation: -12
+    pages-with-code: 1
+    pages-read: 1
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-14'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://bullionapi.dev/docs.md
+servers:
+- url: https://api.bullionapi.dev
+paths:
+  /v1/central-bank-gold/de:
+    get:
+      operationId: get_v1_central_bank_gold_de
+      tags:
+      - Central Bank Gold
+      summary: GET /v1/central-bank-gold/de
+      x-source: https://bullionapi.dev/docs.md
+      parameters:
+      - name: end
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: start
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV1CentralBankGoldDeResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl -H "X-API-Key: bullion_your_key"  "https://api.bullionapi.dev/v1/central-bank-gold/de?start=2026-01-01&end=2026-06-30"'
+  /v1/central-bank-reserves/gb:
+    get:
+      operationId: get_v1_central_bank_reserves_gb
+      tags:
+      - Central Bank Reserves
+      summary: GET /v1/central-bank-reserves/gb
+      x-source: https://bullionapi.dev/docs.md
+      parameters:
+      - name: end
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: start
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV1CentralBankReservesGbResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl -H "X-API-Key: bullion_your_key"  "https://api.bullionapi.dev/v1/central-bank-reserves/gb?start=2024-01-01&end=2025-12-31"
+
+          ```'
+  /v1/countries/uk:
+    get:
+      operationId: get_v1_countries_uk
+      tags:
+      - Countries
+      summary: GET /v1/countries/uk
+      x-source: https://bullionapi.dev/docs.md
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV1CountriesUkResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl -H "X-API-Key: bullion_your_key" "https://api.bullionapi.dev/v1/countries/uk"
+
+          ```'
+  /v1/gold/{goldid}:
+    get:
+      operationId: get_v1_gold_goldid
+      tags:
+      - Gold
+      summary: GET /v1/gold/carat
+      x-source: https://bullionapi.dev/docs.md
+      parameters:
+      - name: goldid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: currency
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV1GoldGoldidResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl -H "X-API-Key: bullion_your_key"  "https://api.bullionapi.dev/v1/gold/carat?currency=USD"
+
+          ```'
+        collapsed_from: 7 example path(s) differing only at goldId
+  /v1/portfolio/transactions/11111111-1111-4111-8111-111111111111:
+    delete:
+      operationId: delete_v1_portfolio_transactions_11111111_1111_4111_8111_111111111111
+      tags:
+      - Portfolio
+      summary: DELETE /v1/portfolio/transactions/11111111-1111-4111-8111-111111111111
+      x-source: https://bullionapi.dev/docs.md
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl -X DELETE "https://api.bullionapi.dev/v1/portfolio/transactions/11111111-1111-4111-8111-111111111111"  -H "X-API-Key: bullion_your_key"  -H
+          ''If-Match: "1"''
+
+          ```'
+  /v1/portfolio/{portfolioid}:
+    get:
+      operationId: get_v1_portfolio_portfolioid
+      tags:
+      - Portfolio
+      summary: GET /v1/portfolio/gains
+      x-source: https://bullionapi.dev/docs.md
+      parameters:
+      - name: portfolioid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: uk_tax_year
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl -H "X-API-Key: bullion_your_key"  "https://api.bullionapi.dev/v1/portfolio/gains?uk_tax_year=2025-26"
+
+          ```'
+        collapsed_from: 3 example path(s) differing only at portfolioId
+  /v1/silver/consumption:
+    get:
+      operationId: get_v1_silver_consumption
+      tags:
+      - Silver
+      summary: GET /v1/silver/consumption
+      x-source: https://bullionapi.dev/docs.md
+      parameters:
+      - name: end
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: start
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV1SilverConsumptionResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl -H "X-API-Key: bullion_your_key"  "https://api.bullionapi.dev/v1/silver/consumption?start=2012-01-01&end=2021-12-31"
+
+          ```'
+  /v1/{metal}/{id}:
+    get:
+      operationId: get_v1_metal_id
+      tags:
+      - Api
+      summary: Returns one metal's absolute and percentage change between the final cached observation of two UTC days
+      x-source: https://bullionapi.dev/docs.md
+      parameters:
+      - name: metal
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: currency
+        in: query
+        required: false
+        schema:
+          type: string
+        description: ISO 4217 base currency. Defaults to USD.
+      - name: unit
+        in: query
+        required: false
+        schema:
+          type: string
+        description: 'Optional output mass unit: gram/g, kilogram/kg, or troy_oz/toz. Defaults to troy_oz.'
+      - name: start
+        in: query
+        required: false
+        schema:
+          type: string
+        description: First UTC day to compare (YYYY-MM-DD).
+      - name: end
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Last UTC day to compare. Requires start.
+      - name: period
+        in: query
+        required: false
+        schema:
+          type: string
+        description: 'Rolling UTC window ending today: 1d, 1w, 1m, or 1y.'
+      - name: api_key
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Fallback credential for clients that cannot set the X-API-Key header.
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV1MetalIdResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at id
+  /v1/{v1id}:
+    get:
+      operationId: get_v1_v1id
+      tags:
+      - Api
+      summary: GET /v1/bond-yields returns the latest government bond yields for every covered country.
+      x-source: https://bullionapi.dev/docs.md
+      parameters:
+      - name: v1id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api_key
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Fallback credential for clients that cannot set the X-API-Key header.
+      - name: currency
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV1V1IdResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 10 example path(s) differing only at v1Id
+  /v1/{v1id}/{country}:
+    get:
+      operationId: get_v1_v1id_country
+      tags:
+      - Api
+      summary: GET /v1/bond-yields/{country} returns government bond yields for one country.
+      x-source: https://bullionapi.dev/docs.md
+      parameters:
+      - name: v1id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: country
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: tenor
+        in: query
+        required: false
+        schema:
+          type: string
+        description: 'Filter: 2y|5y|10y|30y.'
+      - name: basis
+        in: query
+        required: false
+        schema:
+          type: string
+        description: 'Filter: nominal|real.'
+      - name: api_key
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Fallback credential for clients that cannot set the X-API-Key header.
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV1V1IdCountryResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 8 example path(s) differing only at v1Id
+components:
+  schemas:
+    GetV1CentralBankGoldDeResponse:
+      type: object
+      properties:
+        status:
+          type: string
+        portfolio:
+          type: object
+          properties:
+            id:
+              type: string
+            metals:
+              type: array
+              items:
+                type: string
+            reporting_currency:
+              type: string
+            created_at:
+              type: string
+              format: date-time
+            updated_at:
+              type: string
+              format: date-time
+        summary:
+          type: object
+          properties:
+            gold_quantity_grams:
+              type: string
+            metals:
+              type: array
+              items: {}
+            cost_basis:
+              type: string
+            realised_pnl:
+              type: string
+            valuation:
+              type: object
+              properties:
+                status:
+                  type: string
+                spot_price:
+                  type:
+                  - string
+                  - 'null'
+                current_value:
+                  type:
+                  - string
+                  - 'null'
+                unrealised_pnl:
+                  type:
+                  - string
+                  - 'null'
+                price_timestamp:
+                  type:
+                  - string
+                  - 'null'
+    GetV1CentralBankReservesGbResponse:
+      type: object
+      properties:
+        status:
+          type: string
+        metric:
+          type: string
+        country:
+          type: string
+        country_name:
+          type: string
+        start:
+          type: string
+          format: date
+        end:
+          type: string
+          format: date
+        series:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              label:
+                type: string
+              unit:
+                type: string
+              frequency:
+                type: string
+              method:
+                type: string
+              observations:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    date:
+                      type: string
+                      format: date
+                    value:
+                      type: string
+    GetV1CountriesUkResponse:
+      type: object
+      properties:
+        status:
+          type: string
+        country:
+          type: string
+        country_name:
+          type: string
+        aliases:
+          type: array
+          items:
+            type: string
+        datasets:
+          type: array
+          items:
+            type: object
+            properties:
+              metric:
+                type: string
+              path:
+                type: string
+    GetV1GoldGoldidResponse:
+      type: object
+      properties:
+        status:
+          type: string
+        currency:
+          type: string
+        unit:
+          type: string
+        as_of:
+          type: string
+          format: date-time
+        karats:
+          type: object
+          properties:
+            24k:
+              type: string
+            23k:
+              type: string
+            22k:
+              type: string
+            21.6k:
+              type: string
+            21k:
+              type: string
+            18k:
+              type: string
+            16k:
+              type: string
+            14k:
+              type: string
+            12k:
+              type: string
+            10k:
+              type: string
+            9k:
+              type: string
+            8k:
+              type: string
+            6k:
+              type: string
+    GetV1SilverConsumptionResponse:
+      type: object
+      properties:
+        status:
+          type: string
+        metric:
+          type: string
+        metal:
+          type: string
+        start:
+          type:
+          - string
+          - 'null'
+        end:
+          type:
+          - string
+          - 'null'
+        series:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              label:
+                type: string
+              unit:
+                type: string
+              frequency:
+                type: string
+              method:
+                type: string
+              geography:
+                type: string
+              category:
+                type: string
+              definition:
+                type: string
+              collected_at:
+                type: string
+                format: date-time
+              freshness:
+                type: string
+              source:
+                type: object
+                properties:
+                  attribution:
+                    type: string
+                  notice:
+                    type: string
+              observations:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    date:
+                      type: string
+                      format: date
+                    value:
+                      type: string
+                    period_start:
+                      type: string
+                      format: date
+    GetV1MetalIdResponse:
+      type: object
+      properties:
+        status:
+          type: string
+        metric:
+          type: string
+        metal:
+          type: string
+        currency:
+          type: string
+        unit:
+          type: string
+        start:
+          type: object
+        end:
+          type: object
+        change:
+          type: string
+        change_percent:
+          type: string
+    GetV1V1IdResponse:
+      type: object
+      properties:
+        status:
+          type: string
+        portfolio:
+          type: object
+          properties:
+            id:
+              type: string
+            metals:
+              type: array
+              items:
+                type: string
+            reporting_currency:
+              type: string
+            created_at:
+              type: string
+              format: date-time
+            updated_at:
+              type: string
+              format: date-time
+        summary:
+          type: object
+          properties:
+            gold_quantity_grams:
+              type: string
+            metals:
+              type: array
+              items: {}
+            cost_basis:
+              type: string
+            realised_pnl:
+              type: string
+            valuation:
+              type: object
+              properties:
+                status:
+                  type: string
+                spot_price:
+                  type:
+                  - string
+                  - 'null'
+                current_value:
+                  type:
+                  - string
+                  - 'null'
+                unrealised_pnl:
+                  type:
+                  - string
+                  - 'null'
+                price_timestamp:
+                  type:
+                  - string
+                  - 'null'
+    GetV1V1IdCountryResponse:
+      type: object
+      properties:
+        status:
+          type: string
+        metric:
+          type: string
+        country:
+          type: string
+        series:
+          type: array
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: X-API-Key
+security:
+- apiKey: []
+tags:
+- name: Api
+- name: Central Bank Gold
+- name: Central Bank Reserves
+- name: Countries
+- name: Gold
+- name: Portfolio
+- name: Silver

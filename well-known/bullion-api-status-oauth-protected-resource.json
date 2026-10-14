@@ -1,0 +1,1 @@
+{"resource":"https://api.bullionapi.dev/mcp","authorization_servers":["https://api.bullionapi.dev/api/auth"],"bearer_methods_supported":["header"],"scopes_supported":["market:read","macro:read","portfolio:read"]}

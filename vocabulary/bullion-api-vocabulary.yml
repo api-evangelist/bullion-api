@@ -1,0 +1,50 @@
+generated: '2026-10-14'
+method: derived
+generator: derive-vocabulary.py
+source: openapi/_ae-authored/bullion-api-openapi-generated.yml
+vocabulary:
+  name: Bullion API Domain Vocabulary
+  description: 'Terms declared by Bullion API''s own API contract: its resource groups, objects and enumerations, with the contract''s definitions.
+    Derived, not authored.'
+  version: '2026-10-14'
+  terms:
+  - term: GetV1CentralBankGoldDeResponse
+    definition: 'Object declared by the contract with fields: status, portfolio, summary.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/bullion-api-openapi-generated.yml#/components/schemas/GetV1CentralBankGoldDeResponse
+  - term: GetV1CentralBankReservesGbResponse
+    definition: 'Object declared by the contract with fields: status, metric, country, country_name, start, end, series.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/bullion-api-openapi-generated.yml#/components/schemas/GetV1CentralBankReservesGbResponse
+  - term: GetV1CountriesUkResponse
+    definition: 'Object declared by the contract with fields: status, country, country_name, aliases, datasets.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/bullion-api-openapi-generated.yml#/components/schemas/GetV1CountriesUkResponse
+  - term: GetV1GoldGoldidResponse
+    definition: 'Object declared by the contract with fields: status, currency, unit, as_of, karats.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/bullion-api-openapi-generated.yml#/components/schemas/GetV1GoldGoldidResponse
+  - term: GetV1SilverConsumptionResponse
+    definition: 'Object declared by the contract with fields: status, metric, metal, start, end, series.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/bullion-api-openapi-generated.yml#/components/schemas/GetV1SilverConsumptionResponse
+  - term: GetV1MetalIdResponse
+    definition: 'Object declared by the contract with fields: status, metric, metal, currency, unit, start, end, change, change_percent.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/bullion-api-openapi-generated.yml#/components/schemas/GetV1MetalIdResponse
+  - term: GetV1V1IdResponse
+    definition: 'Object declared by the contract with fields: status, portfolio, summary.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/bullion-api-openapi-generated.yml#/components/schemas/GetV1V1IdResponse
+  - term: GetV1V1IdCountryResponse
+    definition: 'Object declared by the contract with fields: status, metric, country, series.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/bullion-api-openapi-generated.yml#/components/schemas/GetV1V1IdCountryResponse

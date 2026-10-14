@@ -1,0 +1,93 @@
+{
+  "@context": {
+    "@vocab": "https://bullionapi.dev/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "bullion": "https://bullionapi.dev/schema#",
+    "GetV1CentralBankGoldDeResponse": "bullion:GetV1CentralBankGoldDeResponse",
+    "status": {
+      "@id": "bullion:status",
+      "@type": "xsd:string"
+    },
+    "portfolio": {
+      "@id": "bullion:portfolio"
+    },
+    "summary": {
+      "@id": "bullion:summary"
+    },
+    "GetV1CentralBankReservesGbResponse": "bullion:GetV1CentralBankReservesGbResponse",
+    "metric": {
+      "@id": "bullion:metric",
+      "@type": "xsd:string"
+    },
+    "country": {
+      "@id": "bullion:country",
+      "@type": "xsd:string"
+    },
+    "country_name": {
+      "@id": "bullion:country_name",
+      "@type": "xsd:string"
+    },
+    "start": {
+      "@id": "bullion:start",
+      "@type": "xsd:date"
+    },
+    "end": {
+      "@id": "bullion:end",
+      "@type": "xsd:date"
+    },
+    "series": {
+      "@id": "bullion:series",
+      "@container": "@list"
+    },
+    "GetV1CountriesUkResponse": "bullion:GetV1CountriesUkResponse",
+    "aliases": {
+      "@id": "bullion:aliases",
+      "@container": "@list"
+    },
+    "datasets": {
+      "@id": "bullion:datasets",
+      "@container": "@list"
+    },
+    "GetV1GoldGoldidResponse": "bullion:GetV1GoldGoldidResponse",
+    "currency": {
+      "@id": "bullion:currency",
+      "@type": "xsd:string"
+    },
+    "unit": {
+      "@id": "bullion:unit",
+      "@type": "xsd:string"
+    },
+    "as_of": {
+      "@id": "bullion:as_of",
+      "@type": "xsd:dateTime"
+    },
+    "karats": {
+      "@id": "bullion:karats"
+    },
+    "GetV1SilverConsumptionResponse": "bullion:GetV1SilverConsumptionResponse",
+    "metal": {
+      "@id": "bullion:metal",
+      "@type": "xsd:string"
+    },
+    "GetV1MetalIdResponse": "bullion:GetV1MetalIdResponse",
+    "change": {
+      "@id": "bullion:change",
+      "@type": "xsd:string"
+    },
+    "change_percent": {
+      "@id": "bullion:change_percent",
+      "@type": "xsd:string"
+    },
+    "GetV1V1IdResponse": "bullion:GetV1V1IdResponse",
+    "GetV1V1IdCountryResponse": "bullion:GetV1V1IdCountryResponse"
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "Bullion API API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects Bullion API's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-10-14) from openapi/_ae-authored/bullion-api-openapi-generated.yml.",
+  "dcterms:created": "2026-10-14",
+  "dcterms:source": [
+    "openapi/_ae-authored/bullion-api-openapi-generated.yml"
+  ]
+}

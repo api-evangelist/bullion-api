@@ -1,0 +1,4 @@
+Contact: mailto:security@bullionapi.dev
+Expires: Thu, 14 Oct 2027 16:50:36 GMT
+Preferred-Languages: en
+Canonical: https://bullionapi.dev/.well-known/security.txt

@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/bullion-api/main/json-schema/bullion-api-get-v1-v1-id-response-schema.json",
+  "title": "GetV1V1IdResponse",
+  "x-generated": "2026-10-14",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/bullion-api-openapi-generated.yml#/components/schemas/GetV1V1IdResponse",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "string"
+    },
+    "portfolio": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "metals": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "reporting_currency": {
+          "type": "string"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "properties": {
+        "gold_quantity_grams": {
+          "type": "string"
+        },
+        "metals": {
+          "type": "array",
+          "items": {}
+        },
+        "cost_basis": {
+          "type": "string"
+        },
+        "realised_pnl": {
+          "type": "string"
+        },
+        "valuation": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string"
+            },
+            "spot_price": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "current_value": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "unrealised_pnl": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "price_timestamp": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+generated: '2026-10-14'
+method: searched
+source: https://bullionapi.dev/privacy.md
+signals:
+  subprocessors:
+    evidence:
+      - source: https://bullionapi.dev/privacy.md
+        http_status: 200
+        fetched: '2026-10-14'
+        quote: "We use the following sub-processors to operate the service. Each operates under a data-processing agreement with us that restricts use to the documented purposes."
+        section: Sub-processors
+        note: Lists sub‑processors and DPA commitments.
+  data_subject_request:
+    evidence:
+      - source: https://bullionapi.dev/privacy.md
+        http_status: 200
+        fetched: '2026-10-14'
+        quote: "You have rights to access, rectify, erase, restrict, or object to the processing of your personal data, and to data portability."
+        section: Your rights
+        note: Describes user rights under GDPR/CCPA.
+  incident_notification:
+    evidence:
+      - source: https://bullionapi.dev/privacy.md
+        http_status: 200
+        fetched: '2026-10-14'
+        quote: "We will notify you of service changes or security incidents that affect your account."
+        section: Security
+        note: Commitment to notify users of security incidents.
+  data_retention:
+    evidence:
+      - source: https://bullionapi.dev/privacy.md
+        http_status: 200
+        fetched: '2026-10-14'
+        quote: "We keep data only as long as we need it."
+        section: Retention
+        note: States retention policy.
+  age_assurance:
+    evidence:
+      - source: https://bullionapi.dev/privacy.md
+        http_status: 200
+        fetched: '2026-10-14'
+        quote: "We do not knowingly collect personal data from children under the age of 13."
+        section: Children
+        note: Indicates age‑based data protection.

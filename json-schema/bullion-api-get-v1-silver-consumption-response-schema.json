@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/bullion-api/main/json-schema/bullion-api-get-v1-silver-consumption-response-schema.json",
+  "title": "GetV1SilverConsumptionResponse",
+  "x-generated": "2026-10-14",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/bullion-api-openapi-generated.yml#/components/schemas/GetV1SilverConsumptionResponse",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "string"
+    },
+    "metric": {
+      "type": "string"
+    },
+    "metal": {
+      "type": "string"
+    },
+    "start": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "end": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "series": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "unit": {
+            "type": "string"
+          },
+          "frequency": {
+            "type": "string"
+          },
+          "method": {
+            "type": "string"
+          },
+          "geography": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "definition": {
+            "type": "string"
+          },
+          "collected_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "freshness": {
+            "type": "string"
+          },
+          "source": {
+            "type": "object",
+            "properties": {
+              "attribution": {
+                "type": "string"
+              },
+              "notice": {
+                "type": "string"
+              }
+            }
+          },
+          "observations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "date": {
+                  "type": "string",
+                  "format": "date"
+                },
+                "value": {
+                  "type": "string"
+                },
+                "period_start": {
+                  "type": "string",
+                  "format": "date"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

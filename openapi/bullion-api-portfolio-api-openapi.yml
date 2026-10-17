@@ -1,0 +1,75 @@
+openapi: 3.2.0
+info:
+  title: Bullion Portfolio API
+  version: '2026-10-14'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-14: 10 operation(s) read from 1 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Bullion API has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 22
+    documentation: -12
+    pages-with-code: 1
+    pages-read: 1
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-14'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://bullionapi.dev/docs.md
+servers:
+- url: https://api.bullionapi.dev
+security:
+- apiKey: []
+tags:
+- name: Portfolio
+paths:
+  /v1/portfolio/transactions/11111111-1111-4111-8111-111111111111:
+    delete:
+      operationId: delete_v1_portfolio_transactions_11111111_1111_4111_8111_111111111111
+      tags:
+      - Portfolio
+      summary: DELETE /v1/portfolio/transactions/11111111-1111-4111-8111-111111111111
+      x-source: https://bullionapi.dev/docs.md
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl -X DELETE "https://api.bullionapi.dev/v1/portfolio/transactions/11111111-1111-4111-8111-111111111111"  -H "X-API-Key: bullion_your_key"  -H ''If-Match: "1"''
+
+          ```'
+  /v1/portfolio/{portfolioid}:
+    get:
+      operationId: get_v1_portfolio_portfolioid
+      tags:
+      - Portfolio
+      summary: GET /v1/portfolio/gains
+      x-source: https://bullionapi.dev/docs.md
+      parameters:
+      - name: portfolioid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: uk_tax_year
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl -H "X-API-Key: bullion_your_key"  "https://api.bullionapi.dev/v1/portfolio/gains?uk_tax_year=2025-26"
+
+          ```'
+        collapsed_from: 3 example path(s) differing only at portfolioId
+components:
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: X-API-Key

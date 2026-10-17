@@ -90,16 +90,16 @@ common:
   url: https://bullionapi.dev/docs
 
 apis:
-- aid: bullion-api:bullion-api-api
-  name: Bullion API API
-  description: 'Bullion API API as documented publicly: 10 operations. Contract generated from the documentation by API Evangelist (2026-10-14);
-    not the provider''s own document.'
+- aid: bullion-api:bullion-api-bullion-api-api-api
+  name: Bullion API Bullion API API
+  description: The Bullion API API API from Bullion API — 3 operation(s) for bullion api api.
   humanURL: https://bullionapi.dev/docs.md
   baseURL: https://api.bullionapi.dev
+  tags:
+  - Bullion API API
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/bullion-api-openapi-generated.yml
-    x-provenance: generated
+    url: openapi/bullion-api-bullion-api-api-api-openapi.yml
   - type: JSONSchema
     url: json-schema/bullion-api-get-v1-silver-consumption-response-schema.json
   - type: JSONSchema
@@ -112,7 +112,139 @@ apis:
     url: json-schema/bullion-api-get-v1-gold-goldid-response-schema.json
   - type: JSONSchema
     url: json-schema/bullion-api-get-v1-countries-uk-response-schema.json
-
+- aid: bullion-api:bullion-api-central-bank-gold-api
+  name: Bullion API Central Bank Gold API
+  description: The Central Bank Gold API from Bullion API — 1 operation(s) for central bank gold.
+  humanURL: https://bullionapi.dev/docs.md
+  baseURL: https://api.bullionapi.dev
+  tags:
+  - Central Bank Gold
+  properties:
+  - type: OpenAPI
+    url: openapi/bullion-api-central-bank-gold-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/bullion-api-get-v1-silver-consumption-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bullion-api-get-v1-central-bank-gold-de-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bullion-api-get-v1-v1-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bullion-api-get-v1-central-bank-reserves-gb-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bullion-api-get-v1-gold-goldid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bullion-api-get-v1-countries-uk-response-schema.json
+- aid: bullion-api:bullion-api-central-bank-reserves-api
+  name: Bullion API Central Bank Reserves API
+  description: >-
+    The Central Bank Reserves API from Bullion API — 1 operation(s) for central bank reserves.
+  humanURL: https://bullionapi.dev/docs.md
+  baseURL: https://api.bullionapi.dev
+  tags:
+  - Central Bank Reserves
+  properties:
+  - type: OpenAPI
+    url: openapi/bullion-api-central-bank-reserves-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/bullion-api-get-v1-silver-consumption-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bullion-api-get-v1-central-bank-gold-de-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bullion-api-get-v1-v1-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bullion-api-get-v1-central-bank-reserves-gb-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bullion-api-get-v1-gold-goldid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bullion-api-get-v1-countries-uk-response-schema.json
+- aid: bullion-api:bullion-api-countries-api
+  name: Bullion API Countries API
+  description: The Countries API from Bullion API — 1 operation(s) for countries.
+  humanURL: https://bullionapi.dev/docs.md
+  baseURL: https://api.bullionapi.dev
+  tags:
+  - Countries
+  properties:
+  - type: OpenAPI
+    url: openapi/bullion-api-countries-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/bullion-api-get-v1-silver-consumption-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bullion-api-get-v1-central-bank-gold-de-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bullion-api-get-v1-v1-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bullion-api-get-v1-central-bank-reserves-gb-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bullion-api-get-v1-gold-goldid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bullion-api-get-v1-countries-uk-response-schema.json
+- aid: bullion-api:bullion-api-gold-api
+  name: Bullion API Gold API
+  description: The Gold API from Bullion API — 1 operation(s) for gold.
+  humanURL: https://bullionapi.dev/docs.md
+  baseURL: https://api.bullionapi.dev
+  tags:
+  - Gold
+  properties:
+  - type: OpenAPI
+    url: openapi/bullion-api-gold-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/bullion-api-get-v1-silver-consumption-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bullion-api-get-v1-central-bank-gold-de-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bullion-api-get-v1-v1-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bullion-api-get-v1-central-bank-reserves-gb-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bullion-api-get-v1-gold-goldid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bullion-api-get-v1-countries-uk-response-schema.json
+- aid: bullion-api:bullion-api-portfolio-api
+  name: Bullion API Portfolio API
+  description: The Portfolio API from Bullion API — 2 operation(s) for portfolio.
+  humanURL: https://bullionapi.dev/docs.md
+  baseURL: https://api.bullionapi.dev
+  tags:
+  - Portfolio
+  properties:
+  - type: OpenAPI
+    url: openapi/bullion-api-portfolio-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/bullion-api-get-v1-silver-consumption-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bullion-api-get-v1-central-bank-gold-de-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bullion-api-get-v1-v1-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bullion-api-get-v1-central-bank-reserves-gb-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bullion-api-get-v1-gold-goldid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bullion-api-get-v1-countries-uk-response-schema.json
+- aid: bullion-api:bullion-api-silver-api
+  name: Bullion API Silver API
+  description: The Silver API from Bullion API — 1 operation(s) for silver.
+  humanURL: https://bullionapi.dev/docs.md
+  baseURL: https://api.bullionapi.dev
+  tags:
+  - Silver
+  properties:
+  - type: OpenAPI
+    url: openapi/bullion-api-silver-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/bullion-api-get-v1-silver-consumption-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bullion-api-get-v1-central-bank-gold-de-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bullion-api-get-v1-v1-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bullion-api-get-v1-central-bank-reserves-gb-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bullion-api-get-v1-gold-goldid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bullion-api-get-v1-countries-uk-response-schema.json
 x-submission-notes: Gold spot-price API with docs and first-party contact
 
 x-submission-probe: root 200, docs 200; soft-404 ok

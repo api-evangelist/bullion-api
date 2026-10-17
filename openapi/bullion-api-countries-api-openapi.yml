@@ -1,0 +1,74 @@
+openapi: 3.2.0
+info:
+  title: Bullion Countries API
+  version: '2026-10-14'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-14: 10 operation(s) read from 1 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Bullion API has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 22
+    documentation: -12
+    pages-with-code: 1
+    pages-read: 1
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-14'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://bullionapi.dev/docs.md
+servers:
+- url: https://api.bullionapi.dev
+security:
+- apiKey: []
+tags:
+- name: Countries
+paths:
+  /v1/countries/uk:
+    get:
+      operationId: get_v1_countries_uk
+      tags:
+      - Countries
+      summary: GET /v1/countries/uk
+      x-source: https://bullionapi.dev/docs.md
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV1CountriesUkResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl -H "X-API-Key: bullion_your_key" "https://api.bullionapi.dev/v1/countries/uk"
+
+          ```'
+components:
+  schemas:
+    GetV1CountriesUkResponse:
+      type: object
+      properties:
+        status:
+          type: string
+        country:
+          type: string
+        country_name:
+          type: string
+        aliases:
+          type: array
+          items:
+            type: string
+        datasets:
+          type: array
+          items:
+            type: object
+            properties:
+              metric:
+                type: string
+              path:
+                type: string
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: X-API-Key

@@ -1,0 +1,105 @@
+openapi: 3.2.0
+info:
+  title: Bullion Gold API
+  version: '2026-10-14'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-14: 10 operation(s) read from 1 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Bullion API has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 22
+    documentation: -12
+    pages-with-code: 1
+    pages-read: 1
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-14'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://bullionapi.dev/docs.md
+servers:
+- url: https://api.bullionapi.dev
+security:
+- apiKey: []
+tags:
+- name: Gold
+paths:
+  /v1/gold/{goldid}:
+    get:
+      operationId: get_v1_gold_goldid
+      tags:
+      - Gold
+      summary: GET /v1/gold/carat
+      x-source: https://bullionapi.dev/docs.md
+      parameters:
+      - name: goldid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: currency
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV1GoldGoldidResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl -H "X-API-Key: bullion_your_key"  "https://api.bullionapi.dev/v1/gold/carat?currency=USD"
+
+          ```'
+        collapsed_from: 7 example path(s) differing only at goldId
+components:
+  schemas:
+    GetV1GoldGoldidResponse:
+      type: object
+      properties:
+        status:
+          type: string
+        currency:
+          type: string
+        unit:
+          type: string
+        as_of:
+          type: string
+          format: date-time
+        karats:
+          type: object
+          properties:
+            24k:
+              type: string
+            23k:
+              type: string
+            22k:
+              type: string
+            21.6k:
+              type: string
+            21k:
+              type: string
+            18k:
+              type: string
+            16k:
+              type: string
+            14k:
+              type: string
+            12k:
+              type: string
+            10k:
+              type: string
+            9k:
+              type: string
+            8k:
+              type: string
+            6k:
+              type: string
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: X-API-Key

@@ -1,0 +1,28 @@
+{
+  "provider": "bullion-api",
+  "sources": [
+    "_ae-authored/bullion-api-openapi-generated.yml"
+  ],
+  "outputs": [
+    "bullion-api-bullion-api-api-api-openapi.yml",
+    "bullion-api-central-bank-gold-api-openapi.yml",
+    "bullion-api-central-bank-reserves-api-openapi.yml",
+    "bullion-api-countries-api-openapi.yml",
+    "bullion-api-gold-api-openapi.yml",
+    "bullion-api-portfolio-api-openapi.yml",
+    "bullion-api-silver-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "bullion-api-openapi-generated.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "bullion-api-openapi-generated.yml: tagged paths GET /v1/{metal}/{id} -> Bullion API API",
+    "bullion-api-openapi-generated.yml: tagged paths GET /v1/{v1id} -> Bullion API API",
+    "bullion-api-openapi-generated.yml: tagged paths GET /v1/{v1id}/{country} -> Bullion API API",
+    "bullion-api-openapi-generated.yml: declared missing tag: Bullion API API",
+    "apis.yml register: written (+7 apis, 7 total)"
+  ],
+  "skipped": []
+}

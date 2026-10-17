@@ -1,0 +1,263 @@
+openapi: 3.2.0
+info:
+  title: Bullion API API
+  version: '2026-10-14'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-14: 10 operation(s) read from 1 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Bullion API has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 22
+    documentation: -12
+    pages-with-code: 1
+    pages-read: 1
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-14'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://bullionapi.dev/docs.md
+servers:
+- url: https://api.bullionapi.dev
+security:
+- apiKey: []
+tags:
+- name: Bullion API API
+paths:
+  /v1/{metal}/{id}:
+    get:
+      operationId: get_v1_metal_id
+      tags:
+      - Bullion API API
+      summary: Returns one metal's absolute and percentage change between the final cached…
+      x-source: https://bullionapi.dev/docs.md
+      parameters:
+      - name: metal
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: currency
+        in: query
+        required: false
+        schema:
+          type: string
+        description: ISO 4217 base currency. Defaults to USD.
+      - name: unit
+        in: query
+        required: false
+        schema:
+          type: string
+        description: 'Optional output mass unit: gram/g, kilogram/kg, or troy_oz/toz. Defaults to troy_oz.'
+      - name: start
+        in: query
+        required: false
+        schema:
+          type: string
+        description: First UTC day to compare (YYYY-MM-DD).
+      - name: end
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Last UTC day to compare. Requires start.
+      - name: period
+        in: query
+        required: false
+        schema:
+          type: string
+        description: 'Rolling UTC window ending today: 1d, 1w, 1m, or 1y.'
+      - name: api_key
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Fallback credential for clients that cannot set the X-API-Key header.
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV1MetalIdResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at id
+  /v1/{v1id}:
+    get:
+      operationId: get_v1_v1id
+      tags:
+      - Bullion API API
+      summary: GET /v1/bond-yields returns the latest government bond yields for every covered…
+      x-source: https://bullionapi.dev/docs.md
+      parameters:
+      - name: v1id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api_key
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Fallback credential for clients that cannot set the X-API-Key header.
+      - name: currency
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV1V1IdResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 10 example path(s) differing only at v1Id
+  /v1/{v1id}/{country}:
+    get:
+      operationId: get_v1_v1id_country
+      tags:
+      - Bullion API API
+      summary: GET /v1/bond-yields/{country} returns government bond yields for one country
+      x-source: https://bullionapi.dev/docs.md
+      parameters:
+      - name: v1id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: country
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: tenor
+        in: query
+        required: false
+        schema:
+          type: string
+        description: 'Filter: 2y|5y|10y|30y.'
+      - name: basis
+        in: query
+        required: false
+        schema:
+          type: string
+        description: 'Filter: nominal|real.'
+      - name: api_key
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Fallback credential for clients that cannot set the X-API-Key header.
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV1V1IdCountryResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 8 example path(s) differing only at v1Id
+components:
+  schemas:
+    GetV1V1IdCountryResponse:
+      type: object
+      properties:
+        status:
+          type: string
+        metric:
+          type: string
+        country:
+          type: string
+        series:
+          type: array
+    GetV1V1IdResponse:
+      type: object
+      properties:
+        status:
+          type: string
+        portfolio:
+          type: object
+          properties:
+            id:
+              type: string
+            metals:
+              type: array
+              items:
+                type: string
+            reporting_currency:
+              type: string
+            created_at:
+              type: string
+              format: date-time
+            updated_at:
+              type: string
+              format: date-time
+        summary:
+          type: object
+          properties:
+            gold_quantity_grams:
+              type: string
+            metals:
+              type: array
+              items: {}
+            cost_basis:
+              type: string
+            realised_pnl:
+              type: string
+            valuation:
+              type: object
+              properties:
+                status:
+                  type: string
+                spot_price:
+                  type:
+                  - string
+                  - 'null'
+                current_value:
+                  type:
+                  - string
+                  - 'null'
+                unrealised_pnl:
+                  type:
+                  - string
+                  - 'null'
+                price_timestamp:
+                  type:
+                  - string
+                  - 'null'
+    GetV1MetalIdResponse:
+      type: object
+      properties:
+        status:
+          type: string
+        metric:
+          type: string
+        metal:
+          type: string
+        currency:
+          type: string
+        unit:
+          type: string
+        start:
+          type: object
+        end:
+          type: object
+        change:
+          type: string
+        change_percent:
+          type: string
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: X-API-Key
